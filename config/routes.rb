@@ -3,5 +3,9 @@ Rails.application.routes.draw do
 
   root 'board_games#index'
 
+  namespace :admin do
+    resources :users, only: [:index]
+  end
+
   resources :board_games
 end
